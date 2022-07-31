@@ -1,0 +1,98 @@
+const posts = [
+  {
+    userId: 1,
+    id: 1,
+    title: "lorem11",
+    body: "11Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: "lorem12",
+    body: "12Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 1,
+    id: 3,
+    title: "lorem13",
+    body: "13Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: "lorem14",
+    body: "14Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 2,
+    id: 1,
+    title: "lorem21",
+    body: "21Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 2,
+    id: 2,
+    title: "lorem22",
+    body: "22Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 2,
+    id: 3,
+    title: "lorem23",
+    body: "23Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 2,
+    id: 4,
+    title: "lorem24",
+    body: "24Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 3,
+    id: 1,
+    title: "lorem31",
+    body: "31Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 3,
+    id: 2,
+    title: "lorem32",
+    body: "32Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 3,
+    id: 3,
+    title: "lorem33",
+    body: "33Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 3,
+    id: 4,
+    title: "lorem34",
+    body: "34Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 4,
+    id: 1,
+    title: "lorem41",
+    body: "41Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 4,
+    id: 2,
+    title: "lorem42",
+    body: "42Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 4,
+    id: 3,
+    title: "lorem43",
+    body: "43Lorem ipsum dolor sit, amet consectetur",
+  },
+  {
+    userId: 4,
+    id: 4,
+    title: "lorem44",
+    body: "44Lorem ipsum dolor sit, amet consectetur",
+  },
+];
