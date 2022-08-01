@@ -251,15 +251,15 @@
 
 // console.log(randomArr(0, 10, 10));
 // 1.2 За допомогою рекурсії
-// function recursionRandomArr(min, max, length) {
-//   if (length < 1) {
-//     return [];
-//   } else {
-//     const newArr = recursionRandomArr(min, max, length - 1);
-//     newArr.push(Math.round(Math.random() * (max - min) + min));
-//     return newArr;
-//   }
-// }
+function recursionRandomArr(min, max, length) {
+  if (length < 1) {
+    return [];
+  } else {
+    const newArr = recursionRandomArr(min, max, length - 1);
+    newArr.push(Math.round(Math.random() * (max - min) + min));
+    return newArr;
+  }
+}
 // const testArray = recursionRandomArr(0, 10, 5);
 // console.log(testArray);
 

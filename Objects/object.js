@@ -47,6 +47,9 @@
 //   Ann: 160,
 //   Pete: 130,
 // };
+// const premierEmployee = "premier employee";
+// salaries[premierEmployee] = "somebody";
+// console.log(salaries);
 // let sum = 0;
 // function sumProps(obj) {
 //   for (const key in obj) {
@@ -68,7 +71,7 @@
 // 	if (typeof obj[key] == "number") {
 //     obj[key] *= 2;
 //   } else if (typeof obj[key] == "string"){
-// 		obj[key] = 'submenu' 
+// 		obj[key] = 'submenu'
 // 	}
 
 // }
@@ -88,3 +91,5 @@
 // 	let userId = elem.id;
 
 // });
+
+
