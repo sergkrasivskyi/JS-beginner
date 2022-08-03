@@ -459,12 +459,140 @@
 // confirmEnding("Bastian", "ian");
 
 // Функція, повторює строку обрану кількість раз
-function repeatStringNumTimes(str, num) {
-  let result = ''
-	for (let i = 0; i < num; i++) {
-    result += str;
-  }
-  return console.log(result);
-}
+// function repeatStringNumTimes(str, num) {
+//   let result = ''
+// 	for (let i = 0; i < num; i++) {
+//     result += str;
+//   }
+//   return console.log(result);
+// }
 
-repeatStringNumTimes("abc", 9);
+// repeatStringNumTimes("abc", 9);
+
+// Finders Keepers
+// Create a function that looks through an array arr and returns
+// the first element in it that passes a 'truth test'. This means
+// that given an element x, the 'truth test' is passed if func(x)
+// is true. If no element passes the test, return undefined.
+
+// function findElement(arr, func) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
+//     if (func(num)) {
+//       return arr[i];
+//     }
+//   }
+// }
+
+// findElement([1, 2, 3, 4], (num) => num % 2 === 0);
+
+// is Boolean ?
+// function booWho(bool) {
+//   typeOf(bool) == boolean ? true : false;
+// }
+
+// booWho(null);
+
+// To Capitalize function
+// function titleCase(str) {
+//   let result = str.toLowerCase().split(/\s/).map((e) => {
+// 		return e[0].toUpperCase() + e.slice(1)
+// 	}).join(' ')
+// 	return result
+// }
+// console.log(titleCase("I'm a little tea pot"));
+
+// Зклеїти пеший масив у другий починаючи з індексу n другого масиву
+// function frankenSplice(arr1, arr2, n) {
+//   let result = [...arr2];
+// 	// arr2.forEach(element => {
+// 	// 	result.push(element)
+// 	// });
+// 	result.splice(n, 0, ...arr1);
+//   return result;
+// }
+
+// console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+// Функція, видаяє з масиву елементи false, null, 0, "", undefined, NaN.
+// function bouncer(arr) {
+//   let result = arr.filter((e) => {
+//     return (
+//       (e != false) &&
+//       (e != null) &&
+//       (e != 0) &&
+//       (e != "") &&
+//       (e != undefined) &&
+//       !Number.isNaN(e)
+//     );
+
+//   });
+//   return result;
+// }
+
+// console.log(bouncer([7, "ate", "", false, 9]));
+// console.log(bouncer([false, null, 0, 4, NaN, undefined, ""]));
+// console.log(bouncer([null, 1, NaN, 2, undefined]));
+// console.log(bouncer([false, null, 0, NaN, undefined, ""]));
+// ---------
+// Where do I Belong
+// Return the lowest index at which a value (second argument) should be
+// inserted into an array (first argument) once it has been sorted. The
+// returned value should be a number.
+
+// function getIndexToIns(arr, num) {
+//   let position = 0;
+//   let sortingArr = arr.sort((a, b) => a - b);
+//   while (num > sortingArr[position]) {
+// 		position++
+// 	}
+//   return position;
+// }
+
+// console.log(getIndexToIns([40, 10, 60], 50))
+// console.log(getIndexToIns([10, 20, 30, 40, 50], 35))
+
+// --------
+
+// Mutations
+
+// Return true if the string in the first element of the
+//  array contains all of the letters of the string in the
+//  second element of the array.
+// function mutation(arr) {
+//   let verify = arr[1].toLowerCase();
+//   let checked = arr[0].toLowerCase();
+//   let isInclude = true;
+//   const letters = verify.split("");
+//   let i = 0;
+//   do {
+//     isInclude = checked.includes(letters[i]);
+//     i++;
+//   } while (isInclude && i < verify.length);
+//   return isInclude;
+// }
+// console.log(mutation(["Mary", "Aarmy"]))
+// console.log(mutation(["Mary", "Army"]));
+// console.log(mutation(["ate", "date"]));
+// mutation(["helLo", "hEy"]);
+// mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+
+// Chunky Monkey
+
+// Write a function that splits an array (first argument) into
+//  groups the length of size (second argument) and returns
+//  them as a two-dimensional array.
+
+function chunkArrayInGroups(arr, size) {
+  let result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+// chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4);
+// chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 4);
+// chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+array.forEach(element => {
+	
+});
