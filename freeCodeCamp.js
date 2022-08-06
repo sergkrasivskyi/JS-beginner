@@ -582,17 +582,32 @@
 //  groups the length of size (second argument) and returns
 //  them as a two-dimensional array.
 
-function chunkArrayInGroups(arr, size) {
-  let result = [];
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
-  }
-  return result;
-}
 // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4);
 // chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 4);
 // chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
-array.forEach(element => {
-	
-});
+// array.forEach(element => {
+
+// });
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+		return this;
+  },
+  down() {
+		this.step--;
+		return this
+  },
+  showStep: function () {
+		// показывает текущую ступеньку
+    console.log(this.step);
+		return this;
+  },
+};
+console.log(ladder);
+ladder.up().up().down().showStep();
+// ladder.up();
+// ladder.down();
+//ladder.showStep(); // 1
+// ladder.up().up().down().showStep(); // 1
