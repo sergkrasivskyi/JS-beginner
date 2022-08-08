@@ -1,0 +1,10 @@
+.search-form {}
+.search-button {} 
+.search-description {
+	visibility: hidden;
+}
+._active {
+	visibility: visible;
+}
+/* .search-title 
+.condition-list  */
