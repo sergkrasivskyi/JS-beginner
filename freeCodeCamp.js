@@ -494,13 +494,16 @@
 // booWho(null);
 
 // To Capitalize function
-// function titleCase(str) {
-//   let result = str.toLowerCase().split(/\s/).map((e) => {
-// 		return e[0].toUpperCase() + e.slice(1)
-// 	}).join(' ')
-// 	return result
-// }
-// console.log(titleCase("I'm a little tea pot"));
+function titleCase(str) {
+  return str
+    .toLowerCase()
+    .split(/\s/)
+    .map((e) => {
+      return e[0].toUpperCase() + e.slice(1);
+    })
+    .join(" ");
+}
+console.log(titleCase("I'm a little tea pot"));
 
 // Зклеїти пеший масив у другий починаючи з індексу n другого масиву
 // function frankenSplice(arr1, arr2, n) {
@@ -593,16 +596,16 @@ let ladder = {
   step: 0,
   up() {
     this.step++;
-		return this;
+    return this;
   },
   down() {
-		this.step--;
-		return this
+    this.step--;
+    return this;
   },
   showStep: function () {
-		// показывает текущую ступеньку
+    // показывает текущую ступеньку
     console.log(this.step);
-		return this;
+    return this;
   },
 };
 console.log(ladder);

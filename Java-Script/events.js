@@ -36,29 +36,86 @@ const opt1 = {
 // а закривається по кліку на будь яке місце на сторінці, окрім самої форми
 // також закривається за допомогою Escape
 // const searchForm = document.getElementsByClassName("search-form");
-function getEvtType(event) {
-	if (event.key == "Escape") {
-		searchDescription.classList.remove("_active");
-  }
-	console.log(event.key);
-}
+
+// Page Variables
+const html = document.documentElement;
+const body = document['body'];
+const bodyElement = document['body'].children;
+const main = document.querySelector('form').children
+console.log(main);
+console.log(body);
+console.log(bodyElement);
+console.log(main);
 const page = document.querySelector("body");
-page.addEventListener("click", hideSearch);
-function hideSearch(event) {
-	// console.log(event.target);
-  if (!event.target.closest("form")) {
-		searchDescription.classList.remove("_active");
-  }
-  console.log(event.target.closest("form"));
-}
-document.addEventListener("keydown", getEvtType);
 const searchForm = document.querySelector(".search-form");
 const searchButton = document.querySelector(".search-button");
 const searchDescription = document.querySelector(".search-description");
-console.log(searchForm);
-console.log(searchButton);
-console.log(searchDescription);
-searchButton.addEventListener("click", showForm);
+const searchInput = document.querySelector(".search-input");
+const leftSymbols = document.querySelector(".left-symbols");
+// Log something
+
+// console.log(leftSymbols);
+// console.log(searchForm);
+// console.log(searchButton);
+// console.log(searchDescription);
+
+// functions
+
+function hideByKey(event) {
+  if (event.key == "Escape") {
+    searchDescription.classList.remove("_active");
+  }
+  console.log(event.key);
+}
+
+function hideSearch(event) {
+  // console.log(event.target);
+  if (!event.target.closest("form")) {
+    searchDescription.classList.remove("_active");
+    searchInput.value = "";
+  }
+  console.log(event.target.closest("form"));
+}
+
 function showForm() {
   searchDescription.classList.toggle("_active");
+  searchInput.value = "";
 }
+
+function symbolsCounter(event) {
+  if (searchInput.value.length > 30) {
+    console.log("Full string");
+  } else {
+    leftSymbols.innerHTML = ` ${30 - searchInput.value.length} symbols left`;
+  }
+}
+function getDownKey(event) {
+  console.log(`Pressed ${event.code} (${event.key})`);
+  console.log(event.repeat);
+}
+function getUpKey(event) {
+  console.log(`Upped ${event.code} (${event.key})`);
+  console.log(event.repeat);
+}
+
+function changeDocTitle() {
+	console.log(html);
+}
+// Mouse Listeners
+page.addEventListener('click', function(){
+	html.childNodes[0].textContent = 'New Document';
+})
+searchButton.addEventListener("click", showForm);
+page.addEventListener("click", hideSearch);
+
+// Key events Listeners
+
+// searchInput.addEventListener("keyup", symbolsCounter);
+searchInput.addEventListener("keydown", function (event) {
+  if (event.repeat) {
+    symbolsCounter(event);
+  }
+});
+page.addEventListener("keydown", getDownKey);
+page.addEventListener("keyup", getUpKey);
+// searchForm.addEventListener("keydown", symbolsCounter);
